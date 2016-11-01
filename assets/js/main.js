@@ -253,6 +253,7 @@
 				});
 
 			// Poptrox.
+			/*
 				$main.poptrox({
 					baseZIndex: 20000,
 					caption: function($a) {
@@ -284,6 +285,7 @@
 					usePopupNav: true,
 					windowMargin: 50
 				});
+			*/
 
 				// Hack: Set margins to 0 when 'xsmall' activates.
 					skel
