@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>Recruitment</title>
+  <title>Karma Justice - RNSSNC.com - renaissance 🌎 🌍 🌏 50 days 50 projects (we are hiring)</title>
   <style>
    html, body { margin: 0;  padding: 0; }
-   #content { margin-left: 2vw; margin-top: 2vh; }
-  </style>  
+   iframe { width: 100vw; height: 100vh; }
+  </style>
+
+  <meta property="og:title" content="Karma Justice - RNSSNC.com - renaissance 🌎 🌍 🌏 50 days 50 projects (we are hiring)"/>
+  <meta property="og:image" content="http://rnssnc.com/metatron.png"/>
+  <meta property="og:site_name" content="connecting 7D with the physical world<"/>
+  <meta property="og:description" content="technology, permaculture, sustainability, community, tribe, village, enlightenment, love and light, ninjas, pirates, unicorns"/>
+
+
  </head>
  <body>
 
@@ -15,10 +22,15 @@
 
     <script>
     $(function() {
-        $.get("https://docs.google.com/document/d/1hp3LblczmjuxX91aBh0s09vDyy9qQbhxR12Nk2VrQuM/pub?embedded=true", function(html) {
+
+        var googleDoc = "https://docs.google.com/document/d/e/2PACX-1vQwbjkJLKYbu0fibZzkQBv3jfMyHKhK5Xb8PoXlz6EOU8D8jhGgHrnxO0Gvxuer4xnfMTfn6CO0FymV/pub?embedded=true";
+
+        var anyUrl = "http://anyorigin.com/go?url=" + encodeURI(googleDoc) + "&callback=?";
+
+        $.getJSON(anyUrl, function(response) {
             var content = $("#content");
 
-            content.html(html);
+            content.html(response.contents);
 
             setTimeout(function() {
                 content.find('a[href^="http://"]').attr("target", "_blank");
